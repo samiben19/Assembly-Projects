@@ -1,0 +1,15 @@
+     1                                  bits 32
+     2                                  
+     3                                  segment code use32 public class=code
+     4                                  global cifra_sute
+     5                                  
+     6                                  cifra_sute:
+     7 00000000 8B442404                    mov eax, [esp + 4]
+     8 00000004 BA00000000                  mov edx, 0
+     9 00000009 BB64000000                  mov ebx, 100
+    10 0000000E F7F3                        div ebx
+    11 00000010 BA00000000                  mov edx, 0
+    12 00000015 BB0A000000                  mov ebx, 10
+    13 0000001A F7F3                        div ebx
+    14 0000001C 89D0                        mov eax, edx
+    15 0000001E C20400                      ret 4
